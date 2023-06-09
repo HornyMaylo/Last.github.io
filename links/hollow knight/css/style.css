@@ -1,0 +1,766 @@
+@import url(../css/null.css);
+@import url(../css/header.css);
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono&family=Inter&display=swap");
+@font-face {
+  font-family: "TrajanBold";
+  src: url("../fonts/trajan/TrajanPro3Bold.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TrajanRegular";
+  src: url("../fonts/trajan/TrajanPro3Regular.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TrajanSemiBold";
+  src: url("../fonts/trajan/TrajanPro3SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #000;
+}
+
+.trailer {
+  padding: 5% 8%;
+  position: relative;
+  width: 100%;
+}
+.trailer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -28%;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+  z-index: 1;
+}
+.trailer .trailer__platformContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.trailer .trailer__platformContainer img {
+  width: 8%;
+}
+.trailer .trailer__wrapper {
+  max-width: 90%;
+  margin: auto;
+}
+.trailer .trailer__wrapper .trailer__container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.trailer .trailer__wrapper .trailer__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.dlc {
+  padding: 0 10%;
+}
+.dlc .dlc__title {
+  font-family: "TrajanBold";
+  font-size: calc((1vw + 1vh) * 1.2);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 2.3);
+  color: #fff;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.dlc .dlc__container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.dlc .dlc__container .dlc__item {
+  width: 20%;
+}
+.dlc .dlc__container .dlc__item .dlc__itemTitle {
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 0.8);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 2);
+  color: #fff;
+  text-align: center;
+}
+.dlc .dlc__container .dlc__item img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.dlc .dlc__container .dlc__item .dlc__itemText {
+  margin-top: 3%;
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.6);
+  color: #fff;
+  text-align: center;
+}
+
+.review {
+  margin-top: 5%;
+  width: 100%;
+}
+.review .review__background {
+  width: 100%;
+  position: relative;
+}
+.review .review__background::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3%;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(360deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+  z-index: 1;
+}
+.review .review__background img {
+  width: 100%;
+}
+.review .review__background .review__citate {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+}
+.review .review__background .review__citate h2 {
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 1);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 2);
+  color: #fff;
+  text-align: center;
+}
+.review .review__background .review__citate h4 {
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1);
+  color: #fff;
+  text-align: center;
+}
+
+.scores {
+  width: 100%;
+  padding: 0 8%;
+}
+.scores .scores__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.scores .scores__container ._1 {
+  width: 15%;
+}
+.scores .scores__container ._2 {
+  width: 7%;
+}
+.scores .scores__container ._3 {
+  width: 5%;
+}
+.scores .scores__container ._4 {
+  width: 7%;
+}
+.scores .scores__container ._5 {
+  width: 9%;
+}
+.scores .scores__text {
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1);
+  color: #fff;
+}
+
+.screenshots {
+  top: 0;
+  left: 0;
+  height: 240vh;
+}
+.screenshots .screenshots__title {
+  margin-top: 15%;
+  font-family: "TrajanBold";
+  font-size: calc((1vw + 1vh) * 1.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1.5);
+  color: #fff;
+  text-align: center;
+}
+.screenshots .screenshots__title img {
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  margin-top: 2%;
+}
+.screenshots .screenshots__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(180deg, #000000, #082414, #000000);
+}
+.screenshots .screenshots__content .content__screen {
+  position: absolute;
+  border-radius: 10px;
+}
+.screenshots .screenshots__content ._1 {
+  background: url(../img/screenshots/1.JPG) no-repeat;
+  background-size: cover;
+  top: 10%;
+  left: 2%;
+  width: 25%;
+  height: 30%;
+}
+.screenshots .screenshots__content .content__text_1 {
+  position: absolute;
+  width: 25%;
+  top: 18%;
+  left: 35%;
+}
+.screenshots .screenshots__content .content__text_1 h2 {
+  text-align: center;
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 1.2);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1.5);
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+.screenshots .screenshots__content .content__text_1 p {
+  text-align: center;
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.7);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+.screenshots .screenshots__content ._2 {
+  background: url(../img/screenshots/2.JPG);
+  background-size: cover;
+  background-position: center;
+  top: 27%;
+  left: 70%;
+  width: 20%;
+  height: 18%;
+}
+.screenshots .screenshots__content .content__text_2 {
+  position: absolute;
+  width: 25%;
+  top: 50%;
+  left: 2%;
+}
+.screenshots .screenshots__content .content__text_2 h2 {
+  text-align: center;
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 1.2);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1.5);
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+.screenshots .screenshots__content .content__text_2 p {
+  text-align: center;
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.7);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+.screenshots .screenshots__content ._3 {
+  background: url(../img/screenshots/3.JPG);
+  background-size: cover;
+  background-position: center;
+  top: 43%;
+  left: 35%;
+  width: 25%;
+  height: 30%;
+}
+.screenshots .screenshots__content ._4 {
+  background: url(../img/screenshots/4.JPG);
+  background-size: cover;
+  background-position: center;
+  top: 60%;
+  left: 75%;
+  width: 12%;
+  height: 8%;
+}
+.screenshots .screenshots__content ._5 {
+  background: url(../img/screenshots/5.JPG);
+  background-size: cover;
+  background-position: center;
+  top: 80%;
+  left: 2%;
+  width: 25%;
+  height: 25%;
+}
+.screenshots .screenshots__content .content__text_3 {
+  position: absolute;
+  width: 25%;
+  top: 87%;
+  left: 35%;
+}
+.screenshots .screenshots__content .content__text_3 h2 {
+  text-align: center;
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 1.2);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1.5);
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+.screenshots .screenshots__content .content__text_3 p {
+  text-align: center;
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.7);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+.screenshots .screenshots__content ._6 {
+  background: url(../img/screenshots/6.JPG);
+  background-size: cover;
+  background-position: center;
+  top: 75%;
+  left: 70%;
+  width: 22%;
+  height: 20%;
+}
+
+.merch {
+  top: 0;
+  left: 0;
+}
+.merch .merch__title {
+  margin-top: 20%;
+  font-family: "TrajanBold";
+  font-size: calc((1vw + 1vh) * 1.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 1.5);
+  color: #fff;
+  text-align: center;
+}
+.merch .merch__title img {
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  margin-top: 2%;
+}
+.merch .merch__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8%;
+}
+.merch .merch__container .merch__item {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.merch .merch__container .merch__item ._1 {
+  width: 60%;
+  margin-bottom: 10%;
+}
+.merch .merch__container .merch__item ._2 {
+  width: 90%;
+  margin-bottom: 18%;
+}
+.merch .merch__container .merch__item ._3 {
+  width: 80%;
+  margin-bottom: 7%;
+}
+.merch .merch__container .merch__item .merch__text {
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.5);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.merch .merch__container .merch__item .merch__btn {
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.7);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #000;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding: 3%;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.2s box-shadow linear;
+}
+.merch .merch__container .merch__item .merch__btn:hover {
+  box-shadow: 0px 0px 50px #fff;
+}
+
+.grimm {
+  margin-top: 20%;
+  width: 100%;
+  background: url(../img/grimm.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  padding: 10%;
+  position: relative;
+}
+.grimm::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(360deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+  z-index: 1;
+}
+.grimm .grimm__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.grimm .grimm__container .grimm__title {
+  font-family: "TrajanBold";
+  font-size: calc((1vw + 1vh) * 1.4);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #fff;
+  margin-bottom: 3%;
+}
+.grimm .grimm__container .grimm__text {
+  width: 40%;
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 0.7);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #fff;
+}
+.grimm .grimm__container .grimm__btn {
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.5);
+  color: #000;
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 5%;
+  padding: 2% 0;
+  transition: 0.2s box-shadow linear;
+}
+.grimm .grimm__container .grimm__btn:hover {
+  box-shadow: 0px 0px 50px #fff;
+}
+
+.develops {
+  margin-top: 10%;
+  width: 100%; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(360deg, #f80f37, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.develops .develops__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.develops .develops__header .develops__headerText {
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 0.6);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.9);
+  color: #fff;
+  margin-top: 3%;
+}
+.develops .develops__header img {
+  width: 25%;
+}
+.develops .develops__header .develops__headerBtn {
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.5);
+  color: #000;
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 5%;
+  padding: 2% 0;
+  transition: 0.2s box-shadow linear;
+}
+.develops .develops__header .develops__headerBtn:hover {
+  box-shadow: 0px 0px 50px #fff;
+}
+.develops .develops__content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.develops .develops__content .develops__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.33%;
+}
+.develops .develops__content .develops__item .develops__name {
+  font-family: "TrajanSemiBold";
+  font-size: calc((1vw + 1vh) * 0.7);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.7);
+  color: #fff;
+  margin-bottom: 5%;
+}
+.develops .develops__content .develops__item .develops__description {
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.6);
+  color: #fff;
+  text-align: center;
+}
+.develops .develops__content .develops__item img {
+  width: 30%;
+  margin-bottom: 5%;
+}
+
+footer {
+  background-color: #f80f37;
+  padding-top: 15%;
+  padding-bottom: 5%;
+}
+footer .footer__container {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer__container .footer__media {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+footer .footer__container .footer__media i {
+  color: #fff;
+  font-size: calc((1vw + 1vh) * 2);
+  cursor: pointer;
+  transition: 0.2s box-shadow linear;
+}
+footer .footer__container .footer__media i:hover {
+  box-shadow: 0px 10px 50px #fff;
+}
+footer .footer__container .footer__coperight {
+  margin-top: 5%;
+  font-family: "TrajanRegular";
+  font-size: calc((1vw + 1vh) * 0.5);
+  font-weight: 300;
+  line-height: calc((1vw + 1vh) * 0.6);
+  color: #fff;
+}
+
+@media screen and (max-width: 1657px) {
+  .dlc .dlc__container .dlc__item .dlc__itemTitle {
+    font-size: calc((1vw + 1vh) * 0.7);
+  }
+  .review .review__background .review__citate {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .layers__logo img {
+    width: 80%;
+  }
+  .dlc .dlc__container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dlc .dlc__container .dlc__item {
+    width: 60%;
+    margin-bottom: 10%;
+  }
+  .dlc .dlc__container .dlc__item .dlc__itemTitle {
+    font-size: calc((1vw + 1vh) * 1.4);
+    margin-bottom: 5%;
+  }
+  .dlc .dlc__container .dlc__item .dlc__itemText {
+    margin-top: 3%;
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: calc((1vw + 1vh) * 1.2);
+  }
+  .review .review__background .review__citate {
+    left: 10%;
+  }
+  .scores .scores__text {
+    font-size: calc((1vw + 1vh) * 0.9);
+    line-height: calc((1vw + 1vh) * 1.4);
+    text-align: center;
+  }
+  .screenshots .screenshots__content .content__text_1 h2 {
+    font-size: calc((1vw + 1vh) * 1.6);
+    line-height: calc((1vw + 1vh) * 1.8);
+    margin-bottom: 8%;
+    width: 100%;
+  }
+  .screenshots .screenshots__content .content__text_1 p {
+    font-size: calc((1vw + 1vh) * 1);
+    font-weight: 300;
+    line-height: calc((1vw + 1vh) * 1);
+    margin-bottom: 5%;
+  }
+  .screenshots .screenshots__content .content__text_2 h2 {
+    font-size: calc((1vw + 1vh) * 1.6);
+    line-height: calc((1vw + 1vh) * 1.8);
+    margin-bottom: 8%;
+    width: 100%;
+  }
+  .screenshots .screenshots__content .content__text_2 p {
+    font-size: calc((1vw + 1vh) * 1);
+    font-weight: 300;
+    line-height: calc((1vw + 1vh) * 1);
+    margin-bottom: 5%;
+  }
+  .screenshots .screenshots__content .content__text_3 h2 {
+    font-size: calc((1vw + 1vh) * 1.6);
+    line-height: calc((1vw + 1vh) * 1.8);
+    margin-bottom: 8%;
+    width: 100%;
+  }
+  .screenshots .screenshots__content .content__text_3 p {
+    font-size: calc((1vw + 1vh) * 1);
+    font-weight: 300;
+    line-height: calc((1vw + 1vh) * 1);
+    margin-bottom: 5%;
+  }
+  .merch .merch__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+  }
+  .merch .merch__container .merch__item {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15%;
+  }
+  .merch .merch__container .merch__item .merch__text {
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: calc((1vw + 1vh) * 1);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .grimm .grimm__container .grimm__title {
+    font-size: calc((1vw + 1vh) * 1.7);
+    line-height: calc((1vw + 1vh) * 1);
+    margin-bottom: 5%;
+  }
+  .grimm .grimm__container .grimm__text {
+    width: 60%;
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: calc((1vw + 1vh) * 1);
+  }
+  .grimm .grimm__container .grimm__btn {
+    font-size: calc((1vw + 1vh) * 0.8);
+    line-height: calc((1vw + 1vh) * 0.8);
+    width: 40%;
+  }
+  .develops .develops__header img {
+    width: 35%;
+  }
+  .develops .develops__header .develops__headerText {
+    font-size: calc((1vw + 1vh) * 0.9);
+    line-height: calc((1vw + 1vh) * 1.2);
+    margin-top: 3%;
+  }
+  .develops .develops__header .develops__headerBtn {
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: calc((1vw + 1vh) * 1);
+    width: 30%;
+  }
+  .develops .develops__content {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .develops .develops__content .develops__item {
+    width: 60%;
+    margin-bottom: 10%;
+  }
+  .develops .develops__content .develops__item img {
+    width: 40%;
+  }
+  .develops .develops__content .develops__item .develops__name {
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: calc((1vw + 1vh) * 1);
+  }
+  .develops .develops__content .develops__item .develops__description {
+    font-size: calc((1vw + 1vh) * 0.8);
+    line-height: calc((1vw + 1vh) * 0.9);
+  }
+  footer .footer__container {
+    width: 60%;
+  }
+  footer .footer__container .footer__media i {
+    font-size: calc((1vw + 1vh) * 3.5);
+  }
+  footer .footer__container .footer__coperight {
+    margin-top: 8%;
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: calc((1vw + 1vh) * 1);
+  }
+}

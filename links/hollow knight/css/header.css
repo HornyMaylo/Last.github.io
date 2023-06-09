@@ -1,0 +1,135 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vw);
+	--transition: transform .75s cubic-bezier(.075, 0.5, 0, 1)
+}
+body {
+	font-family: raleway_f, sans-serif;
+	line-height: 1.55;
+	color: #000;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.layers {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	flex-direction: column;
+}
+
+.layer {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+	z-index: 1;
+	transition: var(--transition);
+}
+
+
+.layers__base {
+	transform: translate3d(0, calc(var(--scrollTop) / 1), 0);
+	z-index: 0;
+}
+
+.layers__middle {
+	transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+}
+
+.layers__front {
+	transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
+	z-index: 3;
+}
+.layers__logo {
+	transform: translate3d(0, calc(var(--scrollTop) / 4), 0);
+	z-index: 4;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+	transition: var(--transition);
+}
+.layers__navigation {
+	transform: translate3d(0, calc(var(--scrollTop) / .9), 0);
+	will-change: transform;
+	transition: var(--transition);
+	z-index: 5;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+
+}
+.layers__navigationBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.layers__navigationItem {
+	font-family: 'TrajanSemiBold';
+	font-size: calc(calc(1vw + 1vh) * .9);
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	transition: color .4s linear;
+}
+.layers__navigationItem:hover {
+	color: #000;
+}
+.dev_logo {
+	width: 15%;
+}
+a:visited {
+	color: #fff;
+}
+
+.layer__header {
+	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+	z-index: 2;
+	will-change: transform;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .7);
+	letter-spacing: calc(var(--index) * .225);
+	margin-top: calc(var(--index) * -10);
+	text-shadow: 0px 5px 7px #020202;
+	transition: var(--transition);
+}
+
+.layers__caption {
+	font-size: calc(var(--index) * .8);
+	letter-spacing: calc(var(--index) * .225);
+}
+
+.layers__title {
+	font-size: calc(var(--index) * 1.5);
+	letter-spacing: calc(var(--index) * .225);
+}
+
+.main-article {
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.content{
+	will-change: transform;
+}
+

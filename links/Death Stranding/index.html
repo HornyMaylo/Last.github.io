@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Parallax</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+	/>
+	<script
+	src="https://kit.fontawesome.com/eb322f32b6.js"
+	crossorigin="anonymous"
+	></script>
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/slider.js" defer></script>
+	<script src="js/mainCharacter.js" defer></script>
+</head>
+<body class="body">
+	<!-- <div class="logo__container">
+	<audio id="player" src="soound.mp3" autoplay></audio>
+	<div class="audioButtons__wrapper">
+		<button onclick="document.getElementById('player').play()">
+			<i class="fa-solid fa-music"></i>
+		</button>
+		<button
+			class="muted"
+			onclick="document.getElementById('player').muted=!document.getElementById('player').muted"
+		>
+			<i class="fa-solid fa-volume-xmark"></i>
+		</button>
+	</div>
+	</div> -->
+	<div class="wrapper">
+	<div class="content">
+		<header class="main-header">
+			<div class="layers">
+				<div class="layer__subscribe">
+					<div onclick="closeSub()" class="layer__subscribeClose">
+						<i class="fa-solid fa-xmark _X"></i>
+					</div>
+					<div class="layer__subscribe-wrapper">
+						<form action="get">
+							<div class="layer__subscribeTitle">Subscribe to us</div>
+							<div class="layer__subscribeNameWrapper">
+								<div class="layer__subscribeNameTitle">Write your name</div>
+								<input required class="layer__subscribeName" type="text">
+							</div>
+							<div class="layer__subscribeMailWrapper">
+								<div class="layer__subscribeMailTitle">Write your mail</div>
+								<input required class="layer__subscribeMail" type="email">
+							</div>
+							<button class="layer__subscribeBtn">Send</button>
+						</form>
+					</div>
+				</div>
+				<div class="layer__nav">
+						<!-- <div class="layers__logo">LOGO</div> -->
+						<div class="layers__menu">
+							<div onclick="slider()" class="layers__menu-item">Slider</div>
+							<a href="#dev" class="layers__menu-item">Development</a>
+							<div class="layers__menu-item">Characters</div>
+							<div class="layers__menu-item">Studia</div>
+						</div>
+						<button onclick="subscribe()" class="layers__menu-btn">Subscribe</button>
+				</div>
+				<div class="layer__header">
+					<div class="layers__caption">A Hideo Kojima game</div>
+					<div class="layers__title">Death Stranding</div>
+				</div>
+				<div
+					class="layer layers__base"
+					style="background-image: url(img/layer-base.png)"
+				></div>
+				<div
+					class="layer layers__middle"
+					style="background-image: url(img/layer-middle.png)"
+				></div>
+				<div
+					class="layer layers__front"
+					style="background-image: url(img/layer-front.png)"
+				></div>
+			</div>
+		</header>
+
+		<article
+			class="main-article"
+			style="background-image: url(img/sam.webp)"
+		>
+			<div class="main-article__content">
+			<div class="image-slider swiper-container">
+				<div class="slider__description">
+					<div class="slider__title">Death Stranding</div>
+					<div class="slider__subtitle">
+					Lorem ipsum dolor sit amet consectetur.
+					</div>
+					<div class="slider__text">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+					Blanditiis, repellat! Incidunt laborum ducimus at ut fugit nam
+					totam hic saepe.Lorem ipsum dolor sit, amet consectetur
+					adipisicing elit. Blanditiis, repellat! Incidunt laborum
+					ducimus at ut fugit nam totam hic saepe.Lorem ipsum dolor sit,
+					amet consectetur adipisicing elit. Blanditiis, repellat!
+					Incidunt laborum ducimus at ut fugit nam totam hic saepe.
+					</div>
+					<a href="" class="slider__btn">Buy now</a>
+				</div>
+				<div class="image-slider__wrapper swiper-wrapper">
+					<div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img src="img/1.jpg" alt="$" />
+					</div>
+					</div>
+					<div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img src="img/2.jpg" alt="$" />
+					</div>
+					</div>
+					<div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img src="img/3.jpg" alt="$" />
+					</div>
+					</div>
+					<div class="image-slider__slide swiper-slide">
+					<div class="image-slider__image">
+						<img src="img/4.jpg" alt="$" />
+					</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			</div>
+		</article>
+		<article id="dev" class="articleCards">
+			<div class="articleCards__title">Death stranding development</div>
+			<div class="bg">
+			<div class="sam"></div>
+			</div>
+			<div class="wrapper__cards">
+			<div class="card">
+				<input
+					type="checkbox"
+					id="card1"
+					class="more"
+					aria-hidden="true"
+				/>
+				<div class="content">
+					<div
+					class="front"
+					style="background-image: url('img/kojima.png')"
+					>
+					<div class="inner">
+						<h2>Game genius</h2>
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<label for="card1" class="button" aria-hidden="true">
+							Details
+						</label>
+					</div>
+					</div>
+					<div class="back">
+					<div class="inner">
+						<div class="info">
+							<span>5</span>
+							<div class="icon">
+							<i class="fas fa-users"></i>
+							<span>people</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>4</span>
+							<div class="icon">
+							<i class="fas fa-door-open"></i>
+							<span>rooms</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>3</span>
+							<div class="icon">
+							<i class="fas fa-bed"></i>
+							<span>beds</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>1</span>
+							<div class="icon">
+							<i class="fas fa-bath"></i>
+							<span>bath</span>
+							</div>
+						</div>
+						<div class="description">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit. Vitae, accusamus.
+							</p>
+							<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing
+							elit. Voluptates earum nostrum ipsam ullam, reiciendis
+							nam consectetur? Doloribus voluptate architecto possimus
+							perferendis tenetur nemo amet temporibus, enim soluta
+							nam, debitis.
+							</p>
+						</div>
+						<div class="location">Kojima san</div>
+						<label for="card1" class="button return" aria-hidden="true">
+							<i class="fas fa-arrow-left"></i>
+						</label>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<input type="checkbox" id="card2" class="more" />
+				<div class="content">
+					<div
+					class="front"
+					style="background-image: url('img/story.webp')"
+					>
+					<div class="inner">
+						<h2>Storytalling</h2>
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<label for="card2" class="button" aria-hidden="true">
+							Details
+						</label>
+					</div>
+					</div>
+					<div class="back">
+					<div class="inner">
+						<div class="info">
+							<span>4</span>
+							<div class="icon">
+							<i class="fas fa-users"></i>
+							<span>people</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>3</span>
+							<div class="icon">
+							<i class="fas fa-door-open"></i>
+							<span>rooms</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>2</span>
+							<div class="icon">
+							<i class="fas fa-bed"></i>
+							<span>beds</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>1</span>
+							<div class="icon">
+							<i class="fas fa-bath"></i>
+							<span>bath</span>
+							</div>
+						</div>
+						<div class="description">
+							<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing
+							elit. Voluptatem unde ea voluptas fuga odio vel veniam
+							eveniet, explicabo autem earum?
+							</p>
+							<ul>
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>
+								Lorem ipsum dolor sit, amet consectetur adipisicing
+								elit.
+							</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+							</ul>
+						</div>
+						<div class="location">Warsaw, Poland</div>
+						<div class="price">42€ / day</div>
+						<label for="card2" class="button return" aria-hidden="true">
+							<i class="fas fa-arrow-left"></i>
+						</label>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<input type="checkbox" id="card3" class="more" />
+				<div class="content">
+					<div
+					class="front"
+					style="background-image: url('img/studia.jpg')"
+					>
+					<div class="inner">
+						<h2>The studia</h2>
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<label for="card3" class="button" aria-hidden="true">
+							Details
+						</label>
+					</div>
+					</div>
+					<div class="back">
+					<div class="inner">
+						<div class="info">
+							<span>8</span>
+							<div class="icon">
+							<i class="fas fa-users"></i>
+							<span>people</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>7</span>
+							<div class="icon">
+							<i class="fas fa-door-open"></i>
+							<span>rooms</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>5</span>
+							<div class="icon">
+							<i class="fas fa-bed"></i>
+							<span>beds</span>
+							</div>
+						</div>
+						<div class="info">
+							<span>2</span>
+							<div class="icon">
+							<i class="fas fa-bath"></i>
+							<span>baths</span>
+							</div>
+						</div>
+						<div class="description">
+							<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing
+							elit. Ipsa libero totam nostrum consequatur autem quae
+							provident quos alias fugit maxime nisi labore,
+							temporibus tempore illo natus voluptates aliquam ipsum
+							officia quasi placeat aut facilis laudantium nam!
+							</p>
+							<p>
+							Quam, iusto.Neque ratione ut deserunt unde dicta
+							nesciunt, repudiandae aspernatur explicabo numquam!
+							Tenetur!
+							</p>
+						</div>
+						<div class="location">Cracow, Poland</div>
+						<div class="price">60€ / day</div>
+						<label for="card3" class="button return" aria-hidden="true">
+							<i class="fas fa-arrow-left"></i>
+						</label>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="articleCards__text">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+				voluptates qui consectetur sed nobis harum numquam aliquid
+				delectus necessitatibus placeat sint, asperiores esse accusantium
+				accusamus quis maiores, fuga id nostrum. Aut in inventore labore
+				expedita amet, facere voluptas, quas illum sed hic velit voluptate
+				excepturi accusamus. Vel reprehenderit libero excepturi, aperiam
+				assumenda sequi placeat aliquam vitae blanditiis, numquam laborum
+				accusamus. Omnis cum unde distinctio suscipit animi vitae! Non
+				ullam facilis explicabo, voluptatibus minus fugiat sequi delectus
+				ad, tempore in, et nisi doloribus nobis recusandae? Eaque velit
+				dignissimos cum aspernatur sunt.
+			</p>
+			</div>
+		</article>
+		<article class="characters">
+			<div class="characterHeroInfo">
+				<div class="characterHeroInfo__contentWrapper">
+					<div class="characterHeroInfo__contentInfo">
+						<div class="contentTitle"><p>Sam</p> <p>Porter Bridges</p></div>
+						<div class="contentText"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, ut minus. Fugiat dignissimos quae sit repellendus? Quod voluptas vel sint ad explicabo minima doloribus numquam libero iste neque, pariatur, perspiciatis error consequuntur deleniti nemo molestias architecto ratione veniam repudiandae eveniet natus ut rerum hic alias! Possimus dolorem iure tempora deleniti atque quidem minima corporis molestias voluptatum. Porro perspiciatis nisi est aliquid eveniet cumque autem aut modi laudantium minus deleniti ipsa iure quam consequuntur odio quibusdam sapiente quasi vero quos illo, recusandae fuga suscipit ullam ratione?</p> <p>Excepturi laborum et quis totam asperiores corrupti, illo at provident minus repudiandae, in hic adipisci nemo odio dolorem maxime obcaecati molestiae minima animi enim nesciunt! Voluptas beatae pariatur mollitia modi recusandae cum ea! Voluptate deleniti nesciunt voluptas libero quisquam voluptatibus ullam totam iste asperiores, impedit, animi, odit sapiente harum dignissimos in molestias dolore. Ex ea eos enim fuga atque, dignissimos dolorum ipsam consectetur.</p></div>
+					</div>
+					<img src="img/samFront.png" alt="1" class="characterFront lastAdjustment">
+					<img src="img/samBack.png" alt="2" class="characterBack adjustment">
+					<div class="arrow" onclick="closeInfo()">
+						<i class="fa-regular fa-circle">
+							<div class="strip_1"></div>
+							<div class="strip_2"></div>
+						</i>
+						<div class="arrow__text">Back</div>
+					</div>
+					<div class="pointer diy">
+						<i class="fa-regular fa-circle"></i>
+						<p id="firstDescriptor">Diy</p>
+					</div>
+					<div class="pointer bb">
+						<p id="secondDescriptor">BB</p>
+						<i class="fa-regular fa-circle"></i>
+					</div>
+					<div class="pointer suitcase">
+						<i class="fa-regular fa-circle"></i>
+						<p id="thirdDescriptor">suitcase</p>
+					</div>
+					<div class="pointer leg">
+						<p id="fourDescriptor">leg Mashine</p>
+						<i class="fa-regular fa-circle"></i>
+					</div>
+					<div class="pointer equipment">
+						<p id="fivesDescriptor">equipment</p>
+						<i class="fa-regular fa-circle"></i>
+					</div>
+
+					<!-- Левый нижний крест -->
+
+					<!-- линии -->
+					<div class="verticalLeftLowerLine"></div>
+					<div class="horizontalLeftLowerLeftLine"></div>
+					<div class="verticalLeftUpLine"></div>
+					<div class="horizontalLeftLowerRightLine"></div>
+					<!-- крестик -->
+					<div class="LeftCrossDot"></div>
+					<div class="LeftCrossLeft"></div>
+					<div class="LeftCrossRight"></div>
+					<div class="LeftCrossUp"></div>
+
+					<!-- Правый нижний крест -->
+
+					<!-- линии -->
+					<div class="verticalRightLowerLine"></div>
+					<div class="verticalRightUpLine"></div>
+					<div class="horizontalRightLowerRightLine"></div>
+					<!-- крестик -->
+					<div class="RightCrossDot"></div>
+					<div class="RightCrossLeft"></div>
+					<div class="RightCrossRight"></div>
+					<div class="RightCrossUp"></div>
+
+					<!-- Левый Верхний крест -->
+
+					<!-- линии -->
+					<div class="horizontalLeftUpRightLine"></div>
+					<div class="verticalLeftUpUpLine"></div>
+					<div class="horizontalLeftUpleftLine"></div>
+					<!-- крестик -->
+					<div class="LeftUpCrossDot"></div>
+					<div class="LeftUpCrossLeft"></div>
+					<div class="LeftUpCrossRight"></div>
+					<div class="LeftUpCrossLow"></div>
+
+					<!-- Правый Верхний крест -->
+
+					<!-- линии -->
+					<div class="verticalRightUpUpLine"></div>
+					<div class="horizontalRightUpRightLine"></div>
+					<!-- крестик -->
+					<div class="RightUpCrossDot"></div>
+					<div class="RightUpCrossLeft"></div>
+					<div class="RightUpCrossRight"></div>
+					<div class="RightUpCrossLow"></div>
+				</div>
+			</div>
+			<div class="characters__background">
+			<video
+				src="sam.mp4"
+				autoplay
+				loop
+				muted
+				class="characters__video"
+			></video>
+			<div class="blure__horizontal1"></div>
+			<div class="blure__horizontal2"></div>
+			<div class="blure__vertical1"></div>
+			<div class="blure__vertical2"></div>
+			</div>
+			<div class="charactersLogo">
+			<i class="fa-regular fa-circle _1"></i>
+			<i class="fa-regular fa-circle _2"></i>
+			<i class="fa-regular fa-circle _3"></i>
+			<i class="fa-solid fa-xmark _X"></i>
+			<span>Characters</span>
+			</div>
+			<div class="characterActor">
+			<i class="fa-regular fa-circle"></i>
+			<span class="actorName">Norman Redus</span>
+			</div>
+			<div class="characterHero" onclick="moreInfo()">
+			<i class="fa-regular fa-circle"></i>
+			<span class="characterName">Sam Porter Bridges</span>
+			</div>
+			<div class="characterCounter">
+			<span class="counter" id="counter">01</span>
+			<div class="counterWrapper">
+				<span id="language">ru</span>
+				<i class="fa-solid fa-globe"></i>
+			</div>
+			</div>
+			<div class="dot _1"></div>
+			<div class="dot _2"></div>
+			<div class="dot _3"></div>
+			<div class="dot _4"></div>
+			<div class="dot _5"></div>
+			<div class="dot _6"></div>
+			<div class="dot _7"></div>
+			<div class="dot _8"></div>
+			<div class="dot _9"></div>
+			<div class="dot _10"></div>
+			<div class="dot _11"></div>
+			<div class="dot _12"></div>
+			<div class="arrow__left" onclick="prevCharacter()">
+			<i class="fa-regular fa-circle">
+				<div class="strip_1"></div>
+				<div class="strip_2"></div>
+			</i>
+			<div class="arrow__characterNames leftNames">Sam</div>
+			</div>
+			<div class="arrow__right" onclick="nextCharacter()">
+			<i class="fa-regular fa-circle">
+				<div class="strip_1"></div>
+				<div class="strip_2"></div>
+			</i>
+			<div class="arrow__characterNames rightNames">Frigile</div>
+			</div>
+		</article>
+		<article class="studia">
+			<div class="studia__decorationWrapper">
+				<div class="line_h l_1"></div>
+				<div class="line_h l_2"></div>
+				<div class="line_h l_3"></div>
+				<div class="line_h l_3"></div>
+				<div class="line_v l_4"></div>
+				<div class="line_v l_5"></div>
+				<div class="dot d_1"></div>
+				<div class="dot d_2"></div>
+				<div class="dot d_3"></div>
+				<div class="dot d_4"></div>
+				<div class="dot d_5"></div>
+				<div class="dot d_6"></div>
+				<div class="dot d_7"></div>
+				<div class="dot d_8"></div>
+				<div class="dot d_9"></div>
+				<div class="dot d_10"></div>
+				<div class="dot d_11"></div>
+				<div class="dot d_12"></div>
+				<div class="dot d_13"></div>
+				<div class="dot d_14"></div>
+				<div class="dot d_15"></div>
+				<div class="dot d_16"></div>
+				<div class="dot d_17"></div>
+				<div class="dot d_18"></div>
+				<div class="dot d_19"></div>
+				<div class="dot d_20"></div>
+				<div class="dot d_21"></div>
+			</div>
+			<div class="studia__container">
+				<div class="studia__video block">
+					<div class="studia__videoTitle">#00 Development Cinematic</div>
+					<video
+						src="dev.mp4"
+						id="devVideo"
+						loop
+						muted
+						class="studia__video"
+					></video>
+					<div class="studia__videoDecoration">
+						<div class="studia__videoDecorationLeftLinesWrapper">
+							<div class="studia__videoDecorationWrapperLineLeft">
+								<div class="studia__videoDecorationLine1"></div>
+								<div class="studia__videoDecorationLine2"></div>
+							</div>
+						</div>
+						<div class="studia__videoDecorationRightLinesWrapper">
+							<div class="studia__videoDecorationWrapperLineRight">
+								<div class="studia__videoDecorationLine1"></div>
+								<div class="studia__videoDecorationLine2"></div>
+							</div>
+						</div>
+						<div class="studia__videoDecorationBublesWrapper">
+							<div class="studia__videoDecorationWrapperBubles">
+								<i class="fa-regular fa-circle buble _1 small"></i>
+								<i class="fa-regular fa-circle buble _2"></i>
+								<i class="fa-regular fa-circle buble _3 small"></i>
+							</div>
+						</div>
+						<div class="studia__videoDecorationCodeWrapper">
+							<div class="studia__videoDecorationWrapperCode">
+								<div class="studia__videoDecorationCode">#000</div>
+							</div>
+						</div>
+						<div class="studia__videoDecorationPlayWrapper" onclick="play()">
+							<div class="studia__videoDecorationWrapperPlay">
+								<div class="studia__videoDecorationLine1" id="videoDecor1"></div>
+								<div class="studia__videoDecorationLine2" id="videoDecor2"></div>
+								<div class="studia__videoDecorationLine3"></div>
+
+								<div class="studia__videoDecorationLine4 hide"></div>
+								<div class="studia__videoDecorationLine5 hide"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="studia__aboutDev block">
+					<div class="studia__aboutDevWrapper">
+						<div class="studia__aboutDevTitle">Lorem ipsum dolor sit.</div>
+						<div class="studia__aboutDevText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autem quam dolores saepe iure dignissimos minus vitae quos? Nemo commodi delectus dolore voluptates ipsum. Aliquid voluptates id corporis exercitationem minus.
+						Facere fuga beatae fugiat quos consequuntur magni cumque natus unde nisi nesciunt eligendi accusamus, quidem dolorum exercitationem iusto labore, ipsum est dolore sapiente deserunt. Accusantium!</div>
+					</div>
+				</div>
+				<div class="studia__name block">
+					<div class="studia__nameWrapper">
+						<p>Kojima</p>
+						<p>studia</p>
+					</div>
+				</div>
+			</div>
+			<div class="studia__citate">
+				<div class="studia__citateWrapper">
+					<div class="studia__citateText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum soluta iusto beatae dolorem numquam nisi fugit magnam fugiat? Quas enim alias labore, nihil ducimus reiciendis facere voluptatibus qui libero modi animi. Hic obcaecati explicabo incidunt minima quod quisquam nobis. Quas enim alias labore, nihil ducimus reiciendis facere voluptatibus qui libero modi animi. Hic obcaecati explicabo incidunt minima quod quisquam nobis.</div>
+					<div class="studia__citateName">Hideo Kojima</div>
+				</div>
+			</div>
+			<div class="studia__symbol">
+				<div class="studia__symbolWrapper">
+					<div class="studia__symbol1">70</div>
+					<div class="studia__symbol2">vz</div>
+				</div>
+			</div>
+			<div class="studia__logo">
+				<img src="img/logo.jpg" alt="" class="logo">
+			</div>
+			<footer>
+				<div class="mainFooter__Wrapper">
+					<div class="logo__wrapper">
+						<div class="footer__logo">
+							<i class="fa-regular fa-circle upcercle"></i>
+							<i class="fa-regular fa-circle leftcercle"></i>
+							<i class="fa-regular fa-circle rightcercle"></i>
+							<i class="fa-solid fa-xmark"></i>
+							<span>Home</span>
+						</div>
+						<div class="footer__GameName">Death Stranding</div>
+					</div>
+					<div class="footer__title">Follow to <span>Game</span> <span>Fit</span></div>
+					<div class="footer__copyright">© 2023 GamiFit. All Rights Reserved.</div>
+				</div>
+			</footer>
+		</article>
+		<div class="light x1"></div>
+		<div class="light x2"></div>
+		<div class="light x3"></div>
+		<div class="light x4"></div>
+		<div class="light x5"></div>
+		<div class="light x6"></div>
+		<div class="light x7"></div>
+		<div class="light x8"></div>
+		<div class="light x9"></div>
+	</div>
+	</div>
+	<script src="js/studia.js"></script>
+	<script src="js/sub.js"></script>
+	<script src="js/scrollby.js"></script>
+	<script src="js/sam.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>

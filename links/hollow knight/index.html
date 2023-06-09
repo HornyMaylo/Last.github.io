@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Parallax</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+	/>
+	<script
+	src="https://kit.fontawesome.com/eb322f32b6.js"
+	crossorigin="anonymous"
+	></script>
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script
+	src="https://kit.fontawesome.com/eb322f32b6.js"
+	crossorigin="anonymous"
+	></script>
+</head>
+<body class="body">
+	<div class="wrapper">
+		<div class="content">
+			<header class="main-header">
+				<div class="layers">
+					<div
+						class="layer layers__base"
+						style="background-image: url(img/layer-base.jpg)"
+					></div>
+					<div
+						class="layer layers__middle"
+						style="background-image: url(img/layer-middle.png)"
+					></div>
+					<div
+						class="layer layers__front"
+						style="background-image: url(img/layer-front.png)"
+					></div>
+					<div class="layers__logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="layer layers__navigation">
+						<div class="layers__navigationBox">
+							<div class="layers__navigationItem">Play</div>
+							<div class="layers__navigationItem">Trailer</div>
+							<img src="img/logo_cherry.png" alt="" class="dev_logo">
+							<div class="layers__navigationItem">Dlc</div>
+							<div class="layers__navigationItem">Team cherry</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<article class="trailer">
+				<div class="trailer__platformContainer">
+					<img src="img/nintendo.png" alt="">
+					<img src="img/ps.png" alt="">
+					<img src="img/xbox.png" alt="">
+					<img src="img/steam.png" alt="">
+					<img src="img/gog.png" alt="">
+					<img src="img/humbl.png" alt="">
+				</div>
+				<div class="trailer__wrapper">
+					<div class="trailer__container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/JuP47fRBsWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</div>
+			</article>
+			<article class="dlc">
+				<div class="dlc__title">Hollow Knight Expands with 4 Giant Free Content Packs</div>
+				<div class="dlc__container">
+					<div class="dlc__item">
+						<div class="dlc__itemTitle">Hidden Dreams</div>
+						<img src="img/dreams.jpg" alt="">
+						<div class="dlc__itemText">Mighty new foes emerge! New Boss Fights, New Upgrades, New Music.</div>
+					</div>
+					<div class="dlc__item">
+						<div class="dlc__itemTitle">The Grimm Troupe</div>
+						<img src="img/grim.jpg" alt="">
+						<div class="dlc__itemText">Light The Nightmare Lantern. Summon the Trope. New Major Quese. New Boss Fights, New Charms. New Friends.</div>
+					</div>
+					<div class="dlc__item">
+						<div class="dlc__itemTitle">Lifeblood</div>
+						<img src="img/lifeBlood.jpg" alt="">
+						<div class="dlc__itemText">A Kingdom Upgraded! New Boss. Upgraded Bosses. Tweaks and Refinemants across the whole game.</div>
+					</div>
+					<div class="dlc__item">
+						<div class="dlc__itemTitle">Godmaster</div>
+						<img src="img/godness.jpg" alt="">
+						<div class="dlc__itemText">Take your place amongst the Gods. New Characters and Quest. New Fights, Epic New Music!</div>
+					</div>
+				</div>
+			</article>
+			<article class="review">
+				<div class="review__background">
+					<img src="img/recenze.jpg" alt="">
+					<div class="review__citate">
+						<h2>
+							"It`s a deep dive into a dark place, and a brilliantly rich experience."
+						</h2>
+						<h4>
+							-9/10 Game Informer
+						</h4>
+					</div>
+				</div>
+			</article>
+			<article class="scores">
+				<div class="scores__container">
+					<img src="img/gameinformer.png" alt="" class="_1">
+					<img src="img/ign.png" alt="" class="_2">
+					<img src="img/roboticLogo.png" alt="" class="_3">
+					<img src="img/metecrtitic.jpg" alt="" class="_4">
+					<img src="img/stopgame.png" alt="" class="_5">
+				</div>
+				<div class="scores__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, earum ipsum at quis quibusdam facilis distinctio maxime quaerat magni cupiditate tempora totam, tenetur, ullam pariatur!</div>
+			</article>
+			<article class="screenshots">
+				<div class="screenshots__title">
+					<h2>Descend Into the Dark</h2>
+					<img src="img/mozaika.jpg" alt="#">
+				</div>
+				<div class="screenshots__content">
+					<div class="content__screen _1"></div>
+					<div class="content__screen _2"></div>
+					<div class="content__screen _3"></div>
+					<div class="content__screen _4"></div>
+					<div class="content__screen _5"></div>
+					<div class="content__screen _6"></div>
+					<div class="content__text_1">
+						<div class="content__textTitle">
+							<h2>Brave THE Depths of A Forgotten Kingdom</h2>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore quas eius velit sapiente ab!</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente, velit similique consequatur!</p>
+						</div>
+					</div>
+					<div class="content__text_2">
+						<h2>Use Your Skills and Reflexes to Survive</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore quas eius velit sapiente ab!</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente, velit similique consequatur!</p>
+					</div>
+					<div class="content__text_3">
+						<h2>Evocative Hand-Drawn Art</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore quas eius velit sapiente ab!</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente, velit similique consequatur!</p>
+					</div>
+				</div>
+			</article>
+			<article class="merch">
+				<div class="merch__title">
+					<h2>Our Merch</h2>
+					<img src="img/mozaika.jpg" alt="#">
+				</div>
+				<div class="merch__container">
+					<div class="merch__item">
+						<img src="img/funGame.png" alt="#" class="_1">
+						<div class="merch__text">Plush Grubs! Plush Knights! Rad Tees and so Much More!</div>
+						<div class="merch__btn">Browse fangamer</div>
+					</div>
+					<div class="merch__item">
+						<img src="img/theYetti.svg" alt="#" class="_2">
+						<div class="merch__text">Classy Tees! Stylish Pins! The Coolest, Friendliest Yetee we Know!</div>
+						<div class="merch__btn">Browse THEYETEE</div>
+					</div>
+					<div class="merch__item">
+						<img src="img/GhostRamp.png" alt="#" class="_3">
+						<div class="merch__text">Limited Vinyl Releases!</div>
+						<div class="merch__btn">Browse Ghost-Ramp</div>
+					</div>
+				</div>
+			</article>
+			<article class="grimm">
+				<div class="grimm__container">
+					<div class="grimm__title">A Haunting, Orchestral Score</div>
+					<div class="grimm__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis perspiciatis aspernatur repellat rem culpa vel iure, explicabo expedita, cupiditate.</div>
+					<div class="grimm__btn">Purchase the Official Soundtrack</div>
+				</div>
+			</article>
+			<article class="develops">
+				<div class="develops__header">
+					<img src="img/logo_cherry.png" alt="#">
+					<div class="develops__headerText">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae aut, dolorum repellendus cumque quas earum. Pariatur nobis officia autem corrupti. Explicabo cum ipsam expedita ipsum consequatur. Possimus, tempora itaque. Explicabo cum ipsam expedita ipsum consequatur. Possimus, tempora itaque.
+					</div>
+					<div class="develops__headerBtn">Visit the Team Cherry Site</div>
+				</div>
+				<div class="develops__content">
+					<div class="develops__item">
+						<img src="img/devs/1.png" alt="#">
+						<div class="develops__name">Ari Glibson</div>
+						<div class="develops__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat veritatis ab harum laudantium, sint eius nulla voluptates maiores voluptate architecto hic!
+						</div>
+					</div>
+					<div class="develops__item">
+						<img src="img/devs/2.png" alt="#">
+						<div class="develops__name">Ari Glibson</div>
+						<div class="develops__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat veritatis ab harum laudantium, sint eius nulla voluptates maiores voluptate architecto hic!
+						</div>
+					</div>
+					<div class="develops__item">
+						<img src="img/devs/3.png" alt="#">
+						<div class="develops__name">Ari Glibson</div>
+						<div class="develops__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat veritatis ab harum laudantium, sint eius nulla voluptates maiores voluptate architecto hic!
+						</div>
+					</div>
+				</div>
+			</article>
+			<footer>
+				<div class="footer__container">
+					<div class="footer__media">
+						<i class="fa-brands fa-square-twitter"></i>
+						<i class="fa-brands fa-square-youtube"></i>
+						<i class="fa-brands fa-square-facebook"></i>
+					</div>
+					<div class="footer__coperight">
+						Hollow Knight is © Copyright 2021 Team Cherry
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script src="js/scrollby.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>

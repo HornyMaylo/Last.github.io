@@ -1,0 +1,705 @@
+@import url(../css/null.css);
+@import url(../css/header.css);
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono&family=Inter&display=swap');
+
+@font-face {
+   font-family: 'TrajanBold';
+   src: url('../fonts/trajan/TrajanPro3Bold.ttf');
+   font-weight: 800;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'TrajanRegular';
+   src: url('../fonts/trajan/TrajanPro3Regular.ttf');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: 'TrajanSemiBold';
+   src: url('../fonts/trajan/TrajanPro3SemiBold.ttf');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+
+$hugeTitles: 'TrajanBold';
+$normalTitles: 'TrajanSemiBold';
+$text: 'TrajanRegular';
+$dark: #070707;
+$sizeindex: calc(1vw + 1vh);
+$lineHeight: calc(1vw + 1vh);
+$transition: .75s cubic-bezier(.2, .6, 0, 1);
+
+@mixin textStyle($family, $size, $weight, $line-height, $color) {
+   font-family: $family;
+   font-size: $size;
+   font-weight: $weight;
+   line-height: $line-height;
+   color: $color;
+}
+
+@mixin blure($left, $width, $height, $transformY, $deg) {
+	content: "";
+	position: absolute;
+	left: $left;
+	width: $width;
+	height: $height;
+	transform: translate(0px, $transformY);
+	background: linear-gradient($deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+	z-index: 1;
+}
+
+body {
+	background-color: #000;
+}
+
+
+.trailer {
+	padding: 5% 8%;
+	position: relative;
+	width: 100%;
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -28%;
+		width: 100%;
+		height: 30%;
+		background: linear-gradient(180deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+		z-index: 1;
+	}
+	& .trailer__platformContainer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5%;
+		& img {
+			width: 8%;
+		}
+	}
+	& .trailer__wrapper {
+		max-width: 90%;
+		margin: auto;
+		& .trailer__container {
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-bottom: 56.25%;
+			& iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.dlc {
+	padding: 0 10%;
+	& .dlc__title {
+		@include textStyle($hugeTitles, calc($sizeindex * 1.2), 300, calc($sizeindex * 2.3), #fff);
+		margin-bottom: 5%;
+		text-align: center;
+	}
+	& .dlc__container {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		& .dlc__item {
+			width: 20%;
+			& .dlc__itemTitle {
+				@include textStyle($normalTitles, calc($sizeindex * .8), 300, calc($sizeindex * 2), #fff);
+				text-align: center;
+			}
+			& img {
+				display: block;
+				width: 100%;
+				margin: 0 auto;
+			}
+			& .dlc__itemText {
+				margin-top: 3%;
+				@include textStyle($text, calc($sizeindex * .5), 300, calc($sizeindex * .6), #fff);
+				text-align: center;
+			}
+		}
+	}
+}
+
+.review {
+	margin-top: 5%;
+	width: 100%;
+	& .review__background {
+		width: 100%;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -3%;
+			width: 100%;
+			height: 250px;
+			background: linear-gradient(360deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+			z-index: 1;
+		}
+		& img {
+			width: 100%;
+		}
+		& .review__citate {
+			position: absolute;
+			top: 30%;
+			left: 20%;
+			z-index: 1;
+			text-align: center;
+			margin: 0 auto;
+			& h2 {
+				@include textStyle($normalTitles, calc($sizeindex * 1), 300, calc($sizeindex * 2), #fff);
+				text-align: center;
+			}
+			& h4 {
+				@include textStyle($normalTitles, calc($sizeindex * .5), 300, calc($sizeindex * 1), #fff);
+				text-align: center;
+			}
+		}
+	}
+}
+
+.scores {
+	width: 100%;
+	padding: 0 8%;
+	& .scores__container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 5%;
+		& ._1 {
+			width: 15%;
+		}
+		& ._2 {
+			width: 7%;
+		}
+		& ._3 {
+			width: 5%;
+		}
+		& ._4 {
+			width: 7%;
+		}
+		& ._5 {
+			width: 9%;
+		}
+	}
+	& .scores__text {
+		@include textStyle($normalTitles, calc($sizeindex * .5), 300, calc($sizeindex * 1), #fff);
+	}
+}
+
+.screenshots {
+	top: 0;
+	left: 0;
+	height: 240vh;
+	& .screenshots__title {
+		margin-top: 15%;
+		@include textStyle($hugeTitles, calc($sizeindex * 1.5), 300, calc($sizeindex * 1.5), #fff);
+		text-align: center;
+		& img {
+			display: block;
+			margin: 0 auto;
+			width: 10%;
+			margin-top: 2%;
+		}
+	}
+	& .screenshots__content {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 0;
+		background: -webkit-linear-gradient(180deg, #000000,#082414,#000000);                     
+		background: linear-gradient(180deg, #000000,#082414,#000000);                                           
+		& .content__screen {
+			position: absolute;
+			border-radius: 10px;
+		}
+		& ._1 {
+			background: url(../img/screenshots/1.JPG) no-repeat;
+			background-size: cover;
+			top: 10%;
+			left: 2%;
+			width: 25%;
+			height: 30%;
+		}
+		& .content__text_1 {
+			position: absolute;
+			width: 25%;
+			top: 18%;
+			left: 35%;
+			& h2 {
+				text-align: center;
+				@include textStyle($normalTitles, calc($sizeindex * 1.2), 300, calc($sizeindex * 1.5), #fff);
+				width: 60%;
+				margin: 0 auto;
+				margin-bottom: 5%;
+			}
+			& p {
+				text-align: center;
+				@include textStyle($text, calc($sizeindex * .7), 300, calc($sizeindex * .7), #fff);
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 3%;
+			}
+		}
+		& ._2 {
+			background: url(../img/screenshots/2.JPG);
+			background-size: cover;
+			background-position: center;
+			top: 27%;
+			left: 70%;
+			width: 20%;
+			height: 18%;
+		}
+		& .content__text_2 {
+			position: absolute;
+			width: 25%;
+			top: 50%;
+			left: 2%;
+			& h2 {
+				text-align: center;
+				@include textStyle($normalTitles, calc($sizeindex * 1.2), 300, calc($sizeindex * 1.5), #fff);
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 5%;
+			}
+			& p {
+				text-align: center;
+				@include textStyle($text, calc($sizeindex * .7), 300, calc($sizeindex * .7), #fff);
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 3%;
+			}
+		}
+		& ._3 {
+			background: url(../img/screenshots/3.JPG);
+			background-size: cover;
+			background-position: center;
+			top: 43%;
+			left: 35%;
+			width: 25%;
+			height: 30%;
+		}
+		& ._4 {
+			background: url(../img/screenshots/4.JPG);
+			background-size: cover;
+			background-position: center;
+			top: 60%;
+			left: 75%;
+			width: 12%;
+			height: 8%;
+		}
+		& ._5 {
+			background: url(../img/screenshots/5.JPG);
+			background-size: cover;
+			background-position: center;
+			top: 80%;
+			left: 2%;
+			width: 25%;
+			height: 25%;
+		}
+		& .content__text_3 {
+			position: absolute;
+			width: 25%;
+			top: 87%;
+			left: 35%;
+			& h2 {
+				text-align: center;
+				@include textStyle($normalTitles, calc($sizeindex * 1.2), 300, calc($sizeindex * 1.5), #fff);
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 5%;
+			}
+			& p {
+				text-align: center;
+				@include textStyle($text, calc($sizeindex * .7), 300, calc($sizeindex * .7), #fff);
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 3%;
+			}
+		}
+		& ._6 {
+			background: url(../img/screenshots/6.JPG);
+			background-size: cover;
+			background-position: center;
+			top: 75%;
+			left: 70%;
+			width: 22%;
+			height: 20%;
+		}
+	}
+}
+
+.merch {
+	top: 0;
+	left: 0;
+	& .merch__title {
+		margin-top: 20%;
+		@include textStyle($hugeTitles, calc($sizeindex * 1.5), 300, calc($sizeindex * 1.5), #fff);
+		text-align: center;
+		& img {
+			display: block;
+			margin: 0 auto;
+			width: 10%;
+			margin-top: 2%;
+		}
+	}
+	& .merch__container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 8%;
+		& .merch__item {
+			width: 33.33%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			& ._1 {
+				width: 60%;
+				margin-bottom: 10%;
+			}
+			& ._2 {
+				width: 90%;
+				margin-bottom: 18%;
+			}
+			& ._3 {
+				width: 80%;
+				margin-bottom: 7%;
+			}
+			& .merch__text {
+				@include textStyle($text, calc($sizeindex * .5), 300, calc($sizeindex * .5), #fff);
+				text-align: center;
+				margin-bottom: 10%;
+			}
+			& .merch__btn {
+				@include textStyle($text, calc($sizeindex * .7), 300, calc($sizeindex * .7), #000);
+				display: block;
+				margin: 0 auto;
+				width: 50%;
+				padding: 3%;
+				text-align: center;
+				background-color: #fff;
+				cursor: pointer;
+				text-transform: uppercase;
+				transition: .2s box-shadow linear;
+				&:hover {
+					box-shadow: 0px 0px 50px #fff;
+				}
+			}
+		}
+	}
+}
+
+.grimm {
+	margin-top: 20%;
+	width: 100%;
+	background: url(../img/grimm.jpg) no-repeat;
+	background-size: cover;
+	background-position: right;
+	padding: 10%;
+	position: relative;
+		&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -1%;
+		width: 100%;
+		height: 40%;
+		background: linear-gradient(360deg, rgba(11, 31, 41, 0) 5%, #000 100%);
+		z-index: 1;
+	}
+	& .grimm__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		& .grimm__title {
+			@include textStyle($hugeTitles, calc($sizeindex * 1.4), 300, calc($sizeindex * .7), #fff);
+			margin-bottom: 3%;
+		}
+		& .grimm__text {
+			width: 40%;
+			@include textStyle($normalTitles, calc($sizeindex * .7), 300, calc($sizeindex * .7), #fff);
+		}
+		& .grimm__btn {
+			@include textStyle($text, calc($sizeindex * .5), 300, calc($sizeindex * .5), #000);
+			display: block;
+			margin: 0 auto;
+			width: 30%;
+			text-align: center;
+			background-color: #fff;
+			cursor: pointer;
+			text-transform: uppercase;
+			margin-top: 5%;
+			padding: 2% 0;
+			transition: .2s box-shadow linear;
+			&:hover {
+				box-shadow: 0px 0px 50px #fff;
+			}
+		}
+	}
+}
+
+.develops {
+	margin-top: 10%;
+	width: 100%;
+	background: -webkit-linear-gradient(360deg, #f80f37,#000000);/* Chrome 10-25, Safari 5.1-6 */                          
+	background: linear-gradient(360deg, #f80f37,#000000);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+	& .develops__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 10%;
+		& .develops__headerText {
+			@include textStyle($normalTitles, calc($sizeindex * .6), 300, calc($sizeindex * .9), #fff);
+			margin-top: 3%;
+		}
+		& img {
+			width: 25%;
+		}
+		& .develops__headerBtn {
+			@include textStyle($text, calc($sizeindex * .5), 300, calc($sizeindex * .5), #000);
+			display: block;
+			margin: 0 auto;
+			width: 20%;
+			text-align: center;
+			background-color: #fff;
+			cursor: pointer;
+			text-transform: uppercase;
+			margin-top: 5%;
+			padding: 2% 0;
+			transition: .2s box-shadow linear;
+			&:hover {
+				box-shadow: 0px 0px 50px #fff;
+			}
+		}
+	}
+	& .develops__content {
+		display: flex;
+		width: 80%;
+		margin: 0 auto;
+		& .develops__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 33.33%;
+			& .develops__name {
+				@include textStyle($normalTitles, calc($sizeindex * .7), 300, calc($sizeindex * .7), #fff);
+				margin-bottom: 5%;
+			}
+			& .develops__description {
+				@include textStyle($text, calc($sizeindex * .5), 300, calc($sizeindex * .6), #fff);
+				text-align: center;
+			}
+			& img {
+				width: 30%;
+				margin-bottom: 5%;
+			}
+		}
+	}
+}
+
+footer {
+	background-color:#f80f37;
+	padding-top: 15%;
+	padding-bottom: 5%;
+	.footer__container {
+		width: 30%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& .footer__media {
+			display: flex;
+			width: 50%;
+			justify-content: space-around;
+			& i {
+				color: #fff;
+				font-size: calc($sizeindex * 2);
+				cursor: pointer;
+				transition: .2s box-shadow linear;
+				&:hover {
+					box-shadow: 0px 10px 50px #fff;
+				}
+			}
+		}
+		& .footer__coperight {
+			margin-top: 5%;
+			@include textStyle($text, calc($sizeindex * .5), 300, calc($sizeindex * .6), #fff);
+		}
+	}
+}
+
+@media screen and (max-width: 1657px) {
+	.dlc .dlc__container .dlc__item .dlc__itemTitle {
+		font-size: calc((1vw + 1vh) * 0.7);
+	}
+	.review .review__background .review__citate {
+		left: 15%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.layers__logo img{
+		width: 80%;
+	}
+	.dlc .dlc__container {
+		display: flex;
+		margin: 0 auto;
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.dlc .dlc__container .dlc__item {
+		width: 60%;
+		margin-bottom: 10%;
+	}
+	.dlc .dlc__container .dlc__item .dlc__itemTitle {
+		font-size: calc((1vw + 1vh) * 1.4);
+		margin-bottom: 5%;
+	}
+	.dlc .dlc__container .dlc__item .dlc__itemText {
+		margin-top: 3%;
+		font-size: calc((1vw + 1vh) * 1);
+		line-height: calc((1vw + 1vh) * 1.2);
+	}
+	.review .review__background .review__citate {
+		left: 10%;
+	}
+	.scores .scores__text {
+		font-size: calc((1vw + 1vh) * 0.9);
+		line-height: calc((1vw + 1vh) * 1.4);
+		text-align: center;
+	}
+	.screenshots .screenshots__content .content__text_1 h2 {
+		font-size: calc((1vw + 1vh) * 1.6);
+		line-height: calc((1vw + 1vh) * 1.8);
+		margin-bottom: 8%;
+		width: 100%;
+	}
+	.screenshots .screenshots__content .content__text_1 p {
+		font-size: calc((1vw + 1vh) * 1);
+		font-weight: 300;
+		line-height: calc((1vw + 1vh) * 1);
+		margin-bottom: 5%;
+	}
+	.screenshots .screenshots__content .content__text_2 h2 {
+		font-size: calc((1vw + 1vh) * 1.6);
+		line-height: calc((1vw + 1vh) * 1.8);
+		margin-bottom: 8%;
+		width: 100%;
+	}
+	.screenshots .screenshots__content .content__text_2 p {
+		font-size: calc((1vw + 1vh) * 1);
+		font-weight: 300;
+		line-height: calc((1vw + 1vh) * 1);
+		margin-bottom: 5%;
+	}
+	.screenshots .screenshots__content .content__text_3 h2 {
+		font-size: calc((1vw + 1vh) * 1.6);
+		line-height: calc((1vw + 1vh) * 1.8);
+		margin-bottom: 8%;
+		width: 100%;
+	}
+	.screenshots .screenshots__content .content__text_3 p {
+		font-size: calc((1vw + 1vh) * 1);
+		font-weight: 300;
+		line-height: calc((1vw + 1vh) * 1);
+		margin-bottom: 5%;
+	}
+	.merch .merch__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 8%;
+	}
+	.merch .merch__container .merch__item {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 15%;
+	}
+	.merch .merch__container .merch__item .merch__text {
+		font-size: calc((1vw + 1vh) * 1);
+		line-height: calc((1vw + 1vh) * 1);
+		color: #fff;
+		text-align: center;
+		margin-bottom: 5%;
+	}
+	.grimm .grimm__container .grimm__title {
+		font-size: calc((1vw + 1vh) * 1.7);
+		line-height: calc((1vw + 1vh) * 1);
+		margin-bottom: 5%;
+	}
+	.grimm .grimm__container .grimm__text {
+		width: 60%;
+		font-size: calc((1vw + 1vh) * 1);
+		line-height: calc((1vw + 1vh) * 1);
+	}
+	.grimm .grimm__container .grimm__btn {
+		font-size: calc((1vw + 1vh) * 0.8);
+		line-height: calc((1vw + 1vh) * 0.8);
+		width: 40%;
+	}
+	.develops .develops__header img {
+		width: 35%;
+	}
+	.develops .develops__header .develops__headerText {
+		font-size: calc((1vw + 1vh) * 0.9);
+		line-height: calc((1vw + 1vh) * 1.2);
+		margin-top: 3%;
+	}
+	.develops .develops__header .develops__headerBtn {
+		font-size: calc((1vw + 1vh) * 1);
+		line-height: calc((1vw + 1vh) * 1);
+		width: 30%;
+	}
+	.develops .develops__content {
+		display: flex;
+		width: 80%;
+		flex-direction: column;
+		align-items:center;
+	}
+	.develops .develops__content .develops__item {
+		width: 60%;
+		margin-bottom: 10%;
+	}
+	.develops .develops__content .develops__item img {
+		width: 40%;
+	}
+	.develops .develops__content .develops__item .develops__name {
+		font-size: calc((1vw + 1vh) * 1);
+		line-height: calc((1vw + 1vh) * 1);
+	}
+	.develops .develops__content .develops__item .develops__description {
+		font-size: calc((1vw + 1vh) * 0.8);
+		line-height: calc((1vw + 1vh) * 0.9);
+	}
+	footer .footer__container {
+		width: 60%;
+	}
+	footer .footer__container .footer__media i {
+		font-size: calc((1vw + 1vh) * 3.5);
+	}
+	footer .footer__container .footer__coperight {
+		margin-top: 8%;
+		font-size: calc((1vw + 1vh) * 1);
+		line-height: calc((1vw + 1vh) * 1);
+	}
+}
